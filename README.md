@@ -1,242 +1,77 @@
-Image Gamma Correction Project
+# 🎛️ Gamma Correction
 
-This project is a Python application that applies gamma correction to an image using OpenCV and Matplotlib, visualizing the results with different gamma values. It demonstrates how gamma correction can be used to adjust the brightness and contrast of an image.
+Bu proje, bir görüntü üzerinde farklı gamma düzeltme (gamma correction) seviyelerini uygulayarak görsel sonuçlarını gösteren basit bir Python uygulamasıdır. Gamma düzeltmesi, görüntülerin parlaklık algısını değiştirmek için kullanılan önemli bir görüntü işleme tekniğidir.
 
-Table of Contents
+## 🖼️ Örnek Sonuç
 
+Aşağıda, farklı gamma değerleriyle işlenmiş bir meyve görseli yer almakta:
 
+![Gamma Correction Output](Screenshot%202025-05-20%20195156.png)
 
+> Görselde sırasıyla: Orijinal, Gamma 0.3 (karartma), Gamma 1 (değişiklik yok), Gamma 3 (aydınlatma) uygulanmıştır.
 
+---
 
-Installation
+## 🔧 Kurulum ve Kullanım
 
+### 1. Depoyu Klonlayın
 
+```bash
+git clone https://github.com/omerturantr/gamma-correction.git
+cd gamma-correction
+```
 
-Usage
+### 2. Gereksinimleri Yükleyin
 
+```bash
+pip install opencv-python matplotlib numpy
+```
 
+### 3. Uygulamayı Başlatın
 
-Features
-
-
-
-Requirements
-
-
-
-Contributing
-
-
-
-License
-
-
-
-Contact
-
-Installation
-
-To run the project on your local machine, follow these steps:
-
-
-
-
-
-Clone the repository:
-
-git clone https://github.com/username/gamma-correction-project.git
-
-
-
-Navigate to the project directory:
-
-cd gamma-correction-project
-
-
-
-Create a virtual environment (optional, but recommended):
-
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-
-
-Install the required dependencies:
-
-pip install opencv-python numpy matplotlib
-
-
-
-Add the image file:
-
-
-
-
-
-Place an image file named fruits.jpg in the project directory, or update the image path in the code to use your own image.
-
-
-
-Run the project:
-
-
-
-
-
-If using PyCharm Community Edition 2025.1:
-
-
-
-
-
-Open the project in PyCharm.
-
-
-
-Run the main.py file (right-click and select "Run").
-
-
-
-Alternatively, you can run it from the terminal:
-
+```bash
 python main.py
+```
 
-Usage
+---
 
-The project applies gamma correction to the fruits.jpg image and visualizes the results with different gamma values (0.3, 1, 3) side by side. Follow these steps to run the project:
+## 🧠 Kodun Açıklaması
 
+`apply_gamma_correction()` fonksiyonu, verilen gamma değerine göre LUT (Look-Up Table) oluşturarak görüntüye gamma düzeltmesi uygular:
 
+```python
+def apply_gamma_correction(image, gamma):
+    invGamma = 1.0 / gamma
+    table = np.array([(i / 255.0) ** invGamma * 255 for i in np.arange(256)]).astype("uint8")
+    return cv2.LUT(image, table)
+```
 
+- **Gamma < 1**: Görüntüyü karartır.  
+- **Gamma = 1**: Görüntü değişmez.  
+- **Gamma > 1**: Görüntüyü aydınlatır.
 
+---
 
-Add your image file to the project directory (e.g., fruits.jpg).
+## 📁 Dosya Yapısı
 
+```
+gamma-correction/
+├── fruits.jpg                        # Giriş görüntüsü
+├── Screenshot 2025-05-20 195156.png # Çıktı ekran görüntüsü
+├── main.py                          # Ana Python betiği
+└── README.md
+```
 
+---
 
-Run the code:
+## 📄 Lisans
 
-python main.py
+Bu proje MIT Lisansı ile lisanslanmıştır.
 
-The result will display the original image alongside three images with different gamma corrections, visualized using Matplotlib.
+---
 
-Example Output:
+## 👤 Geliştirici
 
-
-
-
-
-Original Image: Unmodified version.
-
-
-
-Gamma = 0.3: The image becomes darker, with deeper colors.
-
-
-
-Gamma = 1: Original brightness and contrast (no change).
-
-
-
-Gamma = 3: The image becomes brighter, with lighter colors.
-
-Features
-
-
-
-
-
-Gamma Correction: Adjusts brightness and contrast by applying different gamma values to the image.
-
-
-
-Visualization: Displays the original and corrected images side by side using Matplotlib.
-
-
-
-Flexibility: Works with any image file (update the file path in the code).
-
-Requirements
-
-
-
-
-
-Python 3.6 or higher
-
-
-
-PyCharm Community Edition 2025.1 (optional, can use another IDE or terminal)
-
-
-
-Required libraries:
-
-
-
-
-
-opencv-python
-
-
-
-numpy
-
-
-
-matplotlib
-
-To install the dependencies:
-
-pip install -r requirements.txt
-
-requirements.txt file:
-
-opencv-python
-numpy
-matplotlib
-
-Contributing
-
-If you'd like to contribute to the project, please follow these steps:
-
-
-
-
-
-Fork the repository.
-
-
-
-Create a new branch: git checkout -b new-feature
-
-
-
-Make your changes and commit them: git commit -m "Feature description"
-
-
-
-Push your branch: git push origin new-feature
-
-
-
-Create a Pull Request.
-
-For more details, refer to the CONTRIBUTING.md file (optional to add).
-
-License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
-Contact
-
-For questions or feedback, reach out to:
-
-
-
-
-
-Email: omerturanpersonal@gmail.com	
-
-
-
-GitHub: omerturantr
+**Ömer Turan**  
+📧 [omerturantr@gmail.com](mailto:omerturantr@gmail.com)  
+🔗 [GitHub Profilim](https://github.com/omerturantr)
