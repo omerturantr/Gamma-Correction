@@ -56,9 +56,9 @@ def apply_gamma_correction(image, gamma):
 
 ```
 gamma-correction/
-├── fruits.jpg                        # Input image
-├── Screenshot 2025-05-20 195156.png # Output screenshot
-├── main.py                          # Main Python script
+├── Fruits.jpg                         # Input image
+├── Gamma Correction Output Image.png  # Output screenshot
+├── main.py                            # Main Python script
 └── README.md
 ```
 
@@ -72,6 +72,6 @@ This project is licensed under the MIT License.
 
 ## 👤 Developer
 
-**Ömer Turan**  
-📧 [omerturantr@gmail.com](mailto:omerturantr@gmail.com)  
+**Ömer Faruk Turan**  
+📧 [omerturanpersonal@gmail.com](mailto:omerturanpersonal@gmail.com)  
 🔗 [GitHub Profile](https://github.com/omerturantr)
