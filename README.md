@@ -6,7 +6,8 @@ This project is a simple Python application that applies different levels of gam
 
 Below is an image of fruits processed with different gamma values:
 
-![Gamma Correction Output]![Screenshot 2025-05-20 195156](https://github.com/user-attachments/assets/a9518687-3969-435c-9402-a3531bfbc7bd)
+Gamma Correction Output:
+[Screenshot 2025-05-20 195156](https://github.com/user-attachments/assets/a9518687-3969-435c-9402-a3531bfbc7bd)
 
 
 
