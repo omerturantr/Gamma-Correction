@@ -6,12 +6,10 @@ This project is a simple Python application that applies different levels of gam
 
 Below is an image of fruits processed with different gamma values:
 
-<<<<<<< HEAD
 ![Gamma Correction Output](Pictures/Gamma Correction Output Image.png)
 =======
 
 ![Gamma Correction Output Image](https://github.com/user-attachments/assets/e89ee6db-4602-4b88-a857-777ba0fb572a)
->>>>>>> cbba1982191ce9533bdb3480cd687e339251d0bf
 
 > From left to right: Original, Gamma 0.3 (darkening), Gamma 1 (no change), Gamma 3 (brightening)
 
