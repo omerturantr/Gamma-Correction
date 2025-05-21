@@ -6,7 +6,7 @@ This project is a simple Python application that applies different levels of gam
 
 Below is an image of fruits processed with different gamma values:
 
-![Gamma Correction Output](Gamma Correction Output Image.png)
+![Gamma Correction Output](Pictures/Gamma Correction Output Image.png)
 
 > From left to right: Original, Gamma 0.3 (darkening), Gamma 1 (no change), Gamma 3 (brightening)
 
@@ -44,7 +44,7 @@ def apply_gamma_correction(image, gamma):
     invGamma = 1.0 / gamma
     table = np.array([(i / 255.0) ** invGamma * 255 for i in np.arange(256)]).astype("uint8")
     return cv2.LUT(image, table)
-```
+ ```
 
 - **Gamma < 1**: Darkens the image  
 - **Gamma = 1**: No change  

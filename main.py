@@ -7,7 +7,7 @@ def apply_gamma_correction(image, gamma):
     table = np.array([(i / 255.0) ** invGamma * 255 for i in np.arange(256)]).astype("uint8")
     return cv2.LUT(image, table)
 
-image = cv2.imread("Fruits.jpg")
+image = cv2.imread("Pictures/Fruits.jpg")
 
 gamma_corrected_1 = apply_gamma_correction(image, gamma=0.3)
 gamma_corrected_2 = apply_gamma_correction(image, gamma=1)
