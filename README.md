@@ -1,4 +1,4 @@
-# 🎛️ Gamma Correctio
+# 🎛️ Gamma Correction
 
 This project is a simple Python application that applies different levels of gamma correction to an image and visualizes the results. Gamma correction is an essential image processing technique used to adjust the brightness perception of images.
 
